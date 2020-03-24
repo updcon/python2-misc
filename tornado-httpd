@@ -1,0 +1,9 @@
+#!/bin/bash -e
+
+HTTPD_HOME=${HTTPD_HOME:-${HOME}}
+
+. ${HTTPD_HOME}/.env/bin/activate
+
+python ${HTTPD_HOME}/tornado-httpd.py $@
+
+deactivate
